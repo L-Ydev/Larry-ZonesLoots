@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Larry developpement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="admin-menu">
+        <div class="menu-header">
+            Larry Administration 
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="body-content">
+            <div class="nav-menu">
+                <button class="nav-btn" data-target="content-1">Props Ressources</button>
+                <button class="nav-btn" data-target="content-2">Props Récupérable</button>
+                <button class="nav-btn" data-target="content-3">Props Lootable</button>
+                <button class="nav-btn" data-target="content-4">Zones de Loot</button>
+
+                    <!-- Nouveaux boutons ajoutés ici -->
+                <div class="action-buttons" id="actionButtons">
+                    <button class="action-btn">Ajouter</button>
+                    <!-- <button class="action-btn">Placer</button> -->
+                </div>
+
+            </div>
+        
+            <div class="menu-content">
+                <div id="content-1" class="content">
+                    <table id="ressourcePropsTable">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Label</th>
+                                <th>Requis</th>
+                                <th>Items</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Les données seront insérées ici -->
+                        </tbody>
+                    </table>
+                </div>                
+                
+                <div id="content-2" class="content">
+                    <table id="recupPropsTable">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Label</th>
+                                <th>Requis</th>
+                                <th>Items</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Les données seront insérées ici -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="content-3" class="content">
+                    <table id="lootablePropsTable">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Label</th>
+                                <th>Requis</th>
+                                <th>Items</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Les données seront insérées ici -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="content-4" class="content">
+                    <table id="zoneLootTable">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Label</th>
+                                <th>Requis</th>
+                                <th>Items</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Les données seront insérées ici -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="itemsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="model-name">Configuration des items: <span id="modelNameDisplay"></span></span>
+                <span class="add-button">+</span> <!-- Bouton Ajouter -->
+                <span class="close-button">&times;</span>
+            </div>
+            <table id="itemsTable">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                        <th>Chance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les lignes du tableau seront ajoutées dynamiquement ici -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="coordinatesModal" class="modal">
+        <div class="modal-content">
+            <!-- Nouvel en-tête ajouté ici -->
+            <div class="modal-header">
+                <div class="model-name">Configuration des positions: <span id="coordModelNameDisplay"></span></div>
+                <!-- Bouton d'ajout -->
+                <button class="add-button-coords" title="Ajouter des coordonnées"><i class="fas fa-plus"></i></button>
+                <!-- Bouton de fermeture -->
+                <button class="close-button-coords"><i class="fas fa-times"></i></button>
+            </div>
+            <table id="coordinatesTable">
+                <thead>
+                    <tr>
+                        <th>PosX</th>
+                        <th>PosY</th>
+                        <th>PosZ</th>
+                        <th>RotX</th>
+                        <th>RotY</th>
+                        <th>RotZ</th>
+                        <th>Distance</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les coordonnées seront ajoutées ici -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
